@@ -193,7 +193,7 @@ export default {
           },
           {
             type: "function",
-            value: "+ ",
+            value: "+",
           },
         ],
       ],
@@ -215,6 +215,7 @@ export default {
             this.input
               .replaceAll("×", "*")
               .replaceAll("÷", "/")
+              .replaceAll("−", "-")
               .split(" ")
               .join("")
           );
@@ -225,7 +226,7 @@ export default {
         }
       } else {
         if(this.result && item.type === 'number'){
-          this.input = '0',
+          this.input = '0'
           this.result = null
         }
         const exp =  this.result || this.input;
@@ -241,7 +242,7 @@ export default {
 
 <style>
 .calculator-wrapper {
-  max-width: 650px;
+  max-width: 800px;
   width: 100%;
   margin: 50px auto;
 }
